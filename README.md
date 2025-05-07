@@ -1,43 +1,84 @@
-# My Universal React Project
+# Climbing Pass Marketplace App
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.dev/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
-</p>
+A mobile application for buying and selling unused climbing gym passes, built with React Native and Expo.
 
-## 🚀 How to use
+## Features (Planned)
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` or `npm run start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+- User authentication (email, phone, Google, Apple)
+- Create, edit, and delete pass listings
+- Browse listings by gym name and price
+- Chat system for communication between buyers and sellers
+- User dashboard with active listings and past sales/purchases
+- Push notifications for messages and listing updates
+- Reporting and moderation system
 
-## Running/Modifying Native Code
+## Tech Stack
 
-You can generate native iOS and Android projects from your Expo config file (**app.json**/ **app.config.js**) by runnning `npx expo prebuild`. These native projects can then be compiled and run via XCode and Android Studio.
+- **Frontend**: React Native (via Expo)
+- **Backend**: Firebase (Authentication, Firestore, Storage)
+- **State Management**: React Context + useReducer
+- **Notifications**: Expo Notifications + Firebase Cloud Messaging
+- **Deployment**: Expo EAS
 
-> 💡 Learn more about [native code in Expo](https://docs.expo.dev/workflow/customizing/)
+## Getting Started
 
-## Publishing
+### Prerequisites
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.dev/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.dev/distribution/publishing-websites/).
+- Node.js (v14 or later)
+- npm or yarn
+- Expo Go app on your mobile device
 
-## 📝 Notes
+### Installation
 
-- Learn more about [Universal React](https://docs.expo.dev/).
-- See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/pass-marketplace.git
+   cd pass-marketplace
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npx expo start
+   ```
+
+4. Open the Expo Go app on your mobile device and scan the QR code displayed in the terminal.
+
+## Project Structure
+
+The project is organized as follows:
+
+- `App.js` - Main application component with navigation setup
+- `assets/` - Contains images and other static assets
+- `components/` - Reusable UI components
+- `screens/` - App screens
+- `navigation/` - Navigation configuration
+- `services/` - Firebase and other service integrations
+- `context/` - React Context for state management
+- `hooks/` - Custom React hooks
+- `utils/` - Utility functions
+
+## Firebase Configuration
+
+To connect to Firebase, create a `.env` file in the root directory with your Firebase configuration:
+
+```
+FIREBASE_API_KEY=your-api-key
+FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+FIREBASE_APP_ID=your-app-id
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
